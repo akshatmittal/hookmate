@@ -159,7 +159,7 @@ library AddressConstants {
             return address(0x00000000000044a361Ae3cAc094c9D1b14Eece97); // Sepolia
         }
         if (chainId == 1301) {
-            return address(0x00000000000044a361Ae3cAc094c9D1b14Eece97); // Unichain Sepolia
+            return address(0xdE960C7dcd629916b6618E2B7E4B4413a532550b); // Unichain Sepolia
         }
         if (chainId == 84532) {
             return address(0x00000000000044a361Ae3cAc094c9D1b14Eece97); // Base Sepolia
