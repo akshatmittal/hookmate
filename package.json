@@ -1,8 +1,8 @@
 {
-  "name": "hookmate",
+  "name": "@hookmate/utils",
   "version": "0.1.0",
   "main": "index.js",
-  "repository": "git@github.com:akshatmittal/hookmate.git",
+  "repository": "git@github.com:hookmate/hookmate-utils.git",
   "author": "Akshat Mittal <hi@akshatmittal.com>",
   "license": "MIT",
   "publishConfig": {

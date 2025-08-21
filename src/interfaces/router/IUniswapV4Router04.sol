@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.26;
 
 import { PoolKey } from "@uniswap/v4-core/src/types/PoolKey.sol";
@@ -9,7 +9,7 @@ import { PathKey } from "./PathKey.sol";
 
 /// @title Uniswap V4 Swap Router
 /// @notice A simple, stateless router for execution of swaps against Uniswap v4 Pools
-/// @dev ABI inspired by UniswapV2Router02
+/// @dev ABI inspired by UniswapV2Router02; https://github.com/hookmate/v4-router
 interface IUniswapV4Router04 {
     /// ================ MULTI POOL SWAPS ================= ///
 
@@ -161,9 +161,6 @@ interface IUniswapV4Router04 {
     /// @param deadline block.timestamp must be before this value, otherwise the transaction will revert
     /// @return Delta the balance changes from the swap
     function swap(bytes calldata data, uint256 deadline) external payable returns (BalanceDelta);
-
-    /// @notice Provides calldata compression fallback
-    fallback() external payable;
 
     /// @notice Provides ETH receipts locked to Pool Manager
     receive() external payable;

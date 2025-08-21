@@ -133,36 +133,59 @@ library AddressConstants {
         return address(0x000000000022D473030F116dDEE9F6B43aC78BA3); // Same on all chains.
     }
 
+    /// @dev Important: This uses the Hookmate V4 Router: https://github.com/hookmate/v4-router
     function getV4SwapRouterAddress(uint256 chainId) internal pure returns (address) {
-        /*
-         ** Important: Even though the contract is deployed at the same address, it's not deployed on all chains.
-         */
+        // Addresses for V4SwapRouter on each chain
         if (chainId == 1) {
-            return address(0x00000000000044a361Ae3cAc094c9D1b14Eece97); // Ethereum Mainnet
+            return address(0xA4B6DB94b3017e2b7f17055Ded97D117ed5F551A); // Ethereum Mainnet
         }
         if (chainId == 130) {
-            return address(0x00000000000044a361Ae3cAc094c9D1b14Eece97); // Unichain
+            return address(0x67C9C6050978c1582E4A633760B80CA2eff4015A); // Unichain
         }
         if (chainId == 10) {
-            return address(0x00000000000044a361Ae3cAc094c9D1b14Eece97); // Optimism
+            return address(0x186EAA4941DF95c6058C69FB30dfE23C2827f9Ac); // OP Mainnet
         }
         if (chainId == 8453) {
-            return address(0x00000000000044a361Ae3cAc094c9D1b14Eece97); // Base
+            return address(0x15c40591096E938FE2A62515A7f4B8f4349D1DEE); // Base
         }
         if (chainId == 42161) {
-            return address(0x00000000000044a361Ae3cAc094c9D1b14Eece97); // Arbitrum One
+            return address(0xC0077d448203c71f6b18061C2E95409b386982BE); // Arbitrum One
         }
         if (chainId == 137) {
-            return address(0x00000000000044a361Ae3cAc094c9D1b14Eece97); // Polygon
+            return address(0x8b318E3CcF4495108E8Db61a5814f6bAE98e1465); // Polygon
+        }
+        if (chainId == 81457) {
+            return address(0xE8835Fff71cC8e2253C959683914f24d50Ac9699); // Blast
+        }
+        if (chainId == 7777777) {
+            return address(0x1770E250A9b67E44206542148ed7C5Df38235003); // Zora
+        }
+        if (chainId == 480) {
+            return address(0x3D9e82fb83cA3BDa838AF22d7F3964b25Df64EE7); // World Chain
+        }
+        if (chainId == 57073) {
+            return address(0xC0077d448203c71f6b18061C2E95409b386982BE); // Ink
+        }
+        if (chainId == 1868) {
+            return address(0xC0077d448203c71f6b18061C2E95409b386982BE); // Soneium
+        }
+        if (chainId == 43114) {
+            return address(0x342F35aE81cd6743A4727CdD57e883C877a65aC2); // Avalanche
+        }
+        if (chainId == 56) {
+            return address(0x9461852Ae90c5633207283762a1b5Db337FB3F44); // BNB Smart Chain
         }
         if (chainId == 11155111) {
-            return address(0x00000000000044a361Ae3cAc094c9D1b14Eece97); // Sepolia
+            return address(0xf13D190e9117920c703d79B5F33732e10049b115); // Sepolia
         }
         if (chainId == 1301) {
-            return address(0xdE960C7dcd629916b6618E2B7E4B4413a532550b); // Unichain Sepolia
+            return address(0x9cD2b0a732dd5e023a5539921e0FD1c30E198Dba); // Unichain Sepolia
         }
         if (chainId == 84532) {
-            return address(0x00000000000044a361Ae3cAc094c9D1b14Eece97); // Base Sepolia
+            return address(0x71cD4Ea054F9Cb3D3BF6251A00673303411A7DD9); // Base Sepolia
+        }
+        if (chainId == 421614) {
+            return address(0xcD8D7e10A7aA794C389d56A07d85d63E28780220); // Arbitrum Sepolia
         }
 
         revert UnsupportedChainId();
