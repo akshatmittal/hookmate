@@ -6,7 +6,7 @@ import { DeployHelper } from "./DeployHelper.sol";
 library Permit2Deployer {
     function deploy() internal returns (address permit2) {
         bytes memory initcode_ = abi.encodePacked(initcode());
-        permit2 = DeployHelper.create(initcode_);
+        permit2 = DeployHelper.deploy(initcode_);
     }
 
     function initcode() internal pure returns (bytes memory) {

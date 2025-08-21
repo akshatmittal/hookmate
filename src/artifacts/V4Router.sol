@@ -8,7 +8,7 @@ library V4RouterDeployer {
     function deploy(address poolManager, address permit2) internal returns (address v4Router) {
         bytes memory args = abi.encode(poolManager, permit2);
         bytes memory initcode_ = abi.encodePacked(initcode(), args);
-        v4Router = DeployHelper.create(initcode_);
+        v4Router = DeployHelper.deploy(initcode_);
     }
 
     function initcode() internal pure returns (bytes memory) {

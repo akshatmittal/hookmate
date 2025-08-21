@@ -7,7 +7,7 @@ library V4PoolManagerDeployer {
     function deploy(address initialOwner) internal returns (address manager) {
         bytes memory args = abi.encode(initialOwner);
         bytes memory initcode_ = abi.encodePacked(initcode(), args);
-        manager = DeployHelper.create2(initcode_);
+        manager = DeployHelper.deploy(initcode_);
     }
 
     function initcode() internal pure returns (bytes memory) {

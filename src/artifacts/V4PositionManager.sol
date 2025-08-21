@@ -13,7 +13,7 @@ library V4PositionManagerDeployer {
     ) internal returns (address manager) {
         bytes memory args = abi.encode(poolManager, permit2, unsubscribeGasLimit, positionDescriptor, weth);
         bytes memory initcode_ = abi.encodePacked(initcode(), args);
-        manager = DeployHelper.create2(initcode_);
+        manager = DeployHelper.deploy(initcode_);
     }
 
     function initcode() internal pure returns (bytes memory) {
