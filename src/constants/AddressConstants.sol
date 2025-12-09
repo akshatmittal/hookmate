@@ -6,6 +6,7 @@ library AddressConstants {
     error UnsupportedChainId();
 
     function getPoolManagerAddress(uint256 chainId) internal pure returns (address) {
+        // Mainnet
         if (chainId == 1) {
             return address(0x000000000004444c5dc75cB358380D2e3dE08A90); // Ethereum Mainnet
         }
@@ -31,7 +32,7 @@ library AddressConstants {
             return address(0x0575338e4C17006aE181B47900A84404247CA30f); // Zora
         }
         if (chainId == 480) {
-            return address(0xb1860D529182ac3BC1F51Fa2ABd56662b7D13f33); // Worldchain
+            return address(0xb1860D529182ac3BC1F51Fa2ABd56662b7D13f33); // World Chain
         }
         if (chainId == 57073) {
             return address(0x360E68faCcca8cA495c1B759Fd9EEe466db9FB32); // Ink
@@ -45,6 +46,14 @@ library AddressConstants {
         if (chainId == 56) {
             return address(0x28e2Ea090877bF75740558f6BFB36A5ffeE9e9dF); // BNB Smart Chain
         }
+        if (chainId == 42220) {
+            return address(0x288dc841A52FCA2707c6947B3A777c5E56cd87BC); // Celo
+        }
+        if (chainId == 143) {
+            return address(0x188d586Ddcf52439676Ca21A244753fA19F9Ea8e); // Monad
+        }
+
+        // Testnet
         if (chainId == 1301) {
             return address(0x00B036B58a818B1BC34d502D3fE730Db729e62AC); // Unichain Sepolia
         }
@@ -57,17 +66,12 @@ library AddressConstants {
         if (chainId == 421614) {
             return address(0xFB3e0C6F74eB1a21CC1Da29aeC80D2Dfe6C9a317); // Arbitrum Sepolia
         }
-        if (chainId == 420120000) {
-            return address(0x9131B9084E6017Be19c6a0ef23f73dbB1Bf41f96); // interop-alpha-0
-        }
-        if (chainId == 420120001) {
-            return address(0x9131B9084E6017Be19c6a0ef23f73dbB1Bf41f96); // interop-alpha-1
-        }
 
         revert UnsupportedChainId();
     }
 
     function getPositionManagerAddress(uint256 chainId) internal pure returns (address) {
+        // Mainnet
         if (chainId == 1) {
             return address(0xbD216513d74C8cf14cf4747E6AaA6420FF64ee9e); // Ethereum Mainnet
         }
@@ -93,7 +97,7 @@ library AddressConstants {
             return address(0xf66C7b99e2040f0D9b326B3b7c152E9663543D63); // Zora
         }
         if (chainId == 480) {
-            return address(0xC585E0f504613b5fBf874F21Af14c65260fB41fA); // Worldchain
+            return address(0xC585E0f504613b5fBf874F21Af14c65260fB41fA); // World Chain
         }
         if (chainId == 57073) {
             return address(0x1b35d13a2E2528f192637F14B05f0Dc0e7dEB566); // Ink
@@ -107,6 +111,14 @@ library AddressConstants {
         if (chainId == 56) {
             return address(0x7A4a5c919aE2541AeD11041A1AEeE68f1287f95b); // BNB Smart Chain
         }
+        if (chainId == 42220) {
+            return address(0xf7965f3981e4D5BC383BfBCb61501763e9068CA9); // Celo
+        }
+        if (chainId == 143) {
+            return address(0x5b7eC4a94fF9beDb700fb82aB09d5846972F4016); // Monad
+        }
+
+        // Testnet
         if (chainId == 1301) {
             return address(0xf969Aee60879C54bAAed9F3eD26147Db216Fd664); // Unichain Sepolia
         }
@@ -119,12 +131,6 @@ library AddressConstants {
         if (chainId == 421614) {
             return address(0xAc631556d3d4019C95769033B5E719dD77124BAc); // Arbitrum Sepolia
         }
-        if (chainId == 420120000) {
-            return address(0x4498FE0b1DF6B476453440664A16E269B7587D0F); // interop-alpha-0
-        }
-        if (chainId == 420120001) {
-            return address(0x4498FE0b1DF6B476453440664A16E269B7587D0F); // interop-alpha-1
-        }
 
         revert UnsupportedChainId();
     }
@@ -135,7 +141,7 @@ library AddressConstants {
 
     /// @dev Important: This uses the Hookmate V4 Router: https://github.com/hookmate/v4-router
     function getV4SwapRouterAddress(uint256 chainId) internal pure returns (address) {
-        // Addresses for V4SwapRouter on each chain
+        // Mainnet
         if (chainId == 1) {
             return address(0xA4B6DB94b3017e2b7f17055Ded97D117ed5F551A); // Ethereum Mainnet
         }
@@ -175,6 +181,14 @@ library AddressConstants {
         if (chainId == 56) {
             return address(0x9461852Ae90c5633207283762a1b5Db337FB3F44); // BNB Smart Chain
         }
+        if (chainId == 42220) {
+            return address(0xEcebD2fFb6e454ef467381a19b9C6170Bbc77e4d); // Celo
+        }
+        if (chainId == 143) {
+            return address(0x87F6Dce8Cf52e21093a43e9819d650B35FE83080); // Monad
+        }
+
+        // Testnet
         if (chainId == 11155111) {
             return address(0xf13D190e9117920c703d79B5F33732e10049b115); // Sepolia
         }
