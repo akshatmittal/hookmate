@@ -1,5 +1,0 @@
----
-"hookmate": minor
----
-
-Introduce AddressMap
