@@ -9,6 +9,7 @@ node_modules
 
 cache
 out
+dist
 
 .env
 .env.*

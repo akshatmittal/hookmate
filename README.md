@@ -1,10 +1,12 @@
 # Hookmate
 
-Hookmate is a library designed to simplify Uniswap v4 hook development. It provides reusable libraries and utilities to accelerate building custom hooks for Uniswap v4 pools.
+Hookmate is a library designed to simplify development on Uniswap v4. It provides reusable libraries and utilities to accelerate building custom hooks for Uniswap v4 pools, as well as TypeScript tools, utilities and definitions for easier integration with front-end applications.
 
-The library itself does not provide a version of `v4-core` or `v4-periphery`, so you will need to install those separately. This allows you to use the latest versions of those libraries without being tied to a specific version.
+For Solidity: The library itself does not provide a version of `v4-core` or `v4-periphery`, so you will need to install those separately. This allows you to use the latest versions of those libraries without being tied to a specific version.
 
-## Features
+For TypeScript: The package has no external dependencies and can be used with any external tools and libraries.
+
+## Solidity Features
 
 Hookmate includes the following:
 
@@ -12,6 +14,10 @@ Hookmate includes the following:
 - **Constants**: Includes common address constants for easier integration with `PoolManager`, `PositionManager`, `Permit2` and `V4Router`.
 - **Deploy Helper**: Utilities for deploying and managing utilities, hooks and artifacts.
 - **Interfaces**: Additionally includes interfaces the following for easier access: `V4Router`
+
+## TypeScript Features
+
+- **Type Definitions**: Comprehensive TypeScript definitions for Uniswap v4 related contracts.
 
 ## Usage
 
@@ -23,4 +29,4 @@ Contributions are welcome! Please open issues or submit pull requests for improv
 
 ## License
 
-This code is licensed under the MIT License.
+MIT License
