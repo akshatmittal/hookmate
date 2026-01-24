@@ -13,3 +13,6 @@ dist
 
 .env
 .env.*
+
+# This skips Changelog files from Changesets Actions
+CHANGELOG.md
