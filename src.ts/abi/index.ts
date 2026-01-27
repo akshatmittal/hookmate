@@ -4,6 +4,7 @@ import { PoolManagerArtifact } from "./v4/PoolManager";
 import { StateViewArtifact } from "./v4/StateView";
 
 import { Permit2Artifact } from "./utility/Permit2";
+import { UniversalRouterArtifact } from "./utility/UniversalRouter";
 
 export const v4 = {
   QuoterArtifact,
@@ -14,4 +15,5 @@ export const v4 = {
 
 export const utility = {
   Permit2Artifact,
+  UniversalRouterArtifact,
 };
