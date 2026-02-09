@@ -184,7 +184,7 @@ export function getUniswapContracts(chainId: number) {
       quoter: QUOTER_ADDRESSES[chainId as SupportedChain],
     },
     utility: {
-      permit2: "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+      permit2: "0x000000000022D473030F116dDEE9F6B43aC78BA3" as Address,
       universalRouter: UNIVERSAL_ROUTER_ADDRESSES[chainId as SupportedChain],
     },
   };
