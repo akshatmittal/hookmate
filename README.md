@@ -1,27 +1,70 @@
 # Hookmate
 
-Hookmate is a library designed to simplify development on Uniswap v4. It provides reusable libraries and utilities to accelerate building custom hooks for Uniswap v4 pools, as well as TypeScript tools, utilities and definitions for easier integration with front-end applications.
+[![npm version](https://img.shields.io/npm/v/hookmate.svg)](https://www.npmjs.com/package/hookmate)
+[![license](https://img.shields.io/npm/l/hookmate.svg)](LICENSE)
+[![typescript](https://img.shields.io/badge/TypeScript-ready-blue.svg)](https://www.typescriptlang.org/)
 
-For Solidity: The library itself does not provide a version of `v4-core` or `v4-periphery`, so you will need to install those separately. This allows you to use the latest versions of those libraries without being tied to a specific version.
+Hookmate is a focused toolkit for Uniswap v4 hook development. It bundles Solidity artifacts and helpers alongside TypeScript ABIs and utilities so you can build hooks and integrate them into front-end apps with fewer moving parts.
 
-For TypeScript: The package has no external dependencies and can be used with any external tools and libraries.
+Solidity notes:
+
+- This repo does not vendor `v4-core` or `v4-periphery`. Install those separately to stay on the exact versions you need.
+
+TypeScript notes:
+
+- The published package has no runtime dependencies (optionally `viem` if you need some utilities). It ships types, ABIs, and utilities that work with your tooling.
 
 ## Solidity Features
 
 Hookmate includes the following:
 
-- **Artifacts**: Pre-built artifacts are included for `V4PoolManager`, `V4PositionManager`, `Permit2` and `V4Router`. This way, you can always use the canonical versions of these without being locked to the same Solidity version.
-- **Constants**: Includes common address constants for easier integration with `PoolManager`, `PositionManager`, `Permit2` and `V4Router`.
-- **Deploy Helper**: Utilities for deploying and managing utilities, hooks and artifacts.
-- **Interfaces**: Additionally includes interfaces the following for easier access: `V4Router`
+- **Artifacts**: Canonical artifacts for `V4PoolManager`, `V4PositionManager`, `Permit2`, and `V4Router`.
+- **Constants**: Address constants for `PoolManager`, `PositionManager`, `Permit2`, and `V4Router`.
+- **Deploy Helper**: Utilities to deploy and manage hooks and supporting artifacts.
+- **Interfaces**: Additional interfaces for easier access, including `V4Router`.
 
 ## TypeScript Features
 
-- **Type Definitions**: Comprehensive TypeScript definitions for Uniswap v4 related contracts.
+- **Type Definitions**: Strong typings for Uniswap v4 related contracts.
+- **ABIs**: Organized ABIs for use with `viem` or other clients.
+- **Exports**: Top-level exports and `hookmate/abi` subpath for lighter imports.
+
+## Install
+
+### TypeScript (npm/pnpm/yarn)
+
+```bash
+pnpm add hookmate
+```
+
+### Solidity (Foundry)
+
+Add as a git submodule (or use your preferred dependency workflow):
+
+```bash
+git submodule add https://github.com/akshatmittal/hookmate.git lib/hookmate
+```
+
+Then ensure your `remappings.txt` includes:
+
+```text
+hookmate/=lib/hookmate/
+```
 
 ## Usage
 
-You can directly import `hookmate` via Git Submodules or NPM Package Managers. The default `v4-template` already includes `hookmate` as a foundry module.
+### TypeScript
+
+```ts
+import { v4, utility } from "hookmate/abi";
+```
+
+### Solidity
+
+```solidity
+import { V4PoolManager } from "hookmate/artifacts/V4PoolManager.sol";
+import { AddressConstants } from "hookmate/constants/AddressConstants.sol";
+```
 
 ## Contributing
 
