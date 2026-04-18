@@ -177,16 +177,18 @@ export function getUniswapContracts(chainId: number) {
     throw new UnsupportedChainError(chainId);
   }
 
+  const validChainId = chainId as SupportedChain;
+
   return {
     v4: {
-      poolManager: POOL_MANAGER_ADDRESSES[chainId as SupportedChain],
-      positionManager: POSITION_MANAGER_ADDRESSES[chainId as SupportedChain],
-      stateView: STATE_VIEW_ADDRESSES[chainId as SupportedChain],
-      quoter: QUOTER_ADDRESSES[chainId as SupportedChain],
+      poolManager: POOL_MANAGER_ADDRESSES[validChainId],
+      positionManager: POSITION_MANAGER_ADDRESSES[validChainId],
+      stateView: STATE_VIEW_ADDRESSES[validChainId],
+      quoter: QUOTER_ADDRESSES[validChainId],
     },
     utility: {
       permit2: "0x000000000022D473030F116dDEE9F6B43aC78BA3" as Address,
-      universalRouter: UNIVERSAL_ROUTER_ADDRESSES[chainId as SupportedChain],
+      universalRouter: UNIVERSAL_ROUTER_ADDRESSES[validChainId],
     },
   };
 }
