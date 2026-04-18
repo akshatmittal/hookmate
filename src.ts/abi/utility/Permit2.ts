@@ -11,7 +11,11 @@ export const Permit2Artifact = {
       name: "InsufficientAllowance",
       type: "error",
     },
-    { inputs: [{ internalType: "uint256", name: "maxAmount", type: "uint256" }], name: "InvalidAmount", type: "error" },
+    {
+      inputs: [{ internalType: "uint256", name: "maxAmount", type: "uint256" }],
+      name: "InvalidAmount",
+      type: "error",
+    },
     { inputs: [], name: "InvalidContractSignature", type: "error" },
     { inputs: [], name: "InvalidNonce", type: "error" },
     { inputs: [], name: "InvalidSignature", type: "error" },

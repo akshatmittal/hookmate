@@ -1,6 +1,17 @@
 {
   "name": "hookmate",
   "version": "0.5.1",
+  "license": "MIT",
+  "author": "Akshat Mittal <hi@akshatmittal.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akshatmittal/hookmate.git"
+  },
+  "files": [
+    "dist",
+    "src.ts",
+    "README.md"
+  ],
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -17,17 +28,6 @@
       "require": "./dist/abi/index.cjs"
     }
   },
-  "files": [
-    "dist",
-    "src.ts",
-    "README.md"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/akshatmittal/hookmate.git"
-  },
-  "author": "Akshat Mittal <hi@akshatmittal.com>",
-  "license": "MIT",
   "publishConfig": {
     "access": "public",
     "provenance": true
@@ -35,22 +35,29 @@
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "format": "oxfmt --write",
+    "format:check": "oxfmt --check",
     "prepublishOnly": "pnpm build",
     "changeset": "changeset",
     "version": "changeset version",
     "release": "changeset publish"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "^0.5.2",
-    "@changesets/cli": "^2.27.8",
+    "@changesets/changelog-github": "^0.6.0",
+    "@changesets/cli": "^2.31.0",
+    "@types/node": "catalog:",
     "@uniswap/v4-core": "^1.0.2",
-    "@uniswap/v4-periphery": "^1.0.2",
+    "@uniswap/v4-periphery": "^1.0.3",
     "forge-std": "github:foundry-rs/forge-std#v1.12.0",
-    "tsdown": "^0.20.1",
-    "typescript": "^5.7.3"
+    "oxfmt": "^0.45.0",
+    "oxlint": "^1.60.0",
+    "tsdown": "^0.21.9",
+    "typescript": "catalog:"
   },
   "peerDependencies": {
     "viem": "^2.45.0"
   },
-  "packageManager": "pnpm@10.28.1"
+  "packageManager": "pnpm@10.33.0"
 }

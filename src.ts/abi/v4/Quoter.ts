@@ -12,7 +12,11 @@ export const QuoterArtifact = {
     },
     { inputs: [], name: "NotPoolManager", type: "error" },
     { inputs: [], name: "NotSelf", type: "error" },
-    { inputs: [{ internalType: "uint256", name: "amount", type: "uint256" }], name: "QuoteSwap", type: "error" },
+    {
+      inputs: [{ internalType: "uint256", name: "amount", type: "uint256" }],
+      name: "QuoteSwap",
+      type: "error",
+    },
     { inputs: [], name: "UnexpectedCallSuccess", type: "error" },
     {
       inputs: [{ internalType: "bytes", name: "revertData", type: "bytes" }],

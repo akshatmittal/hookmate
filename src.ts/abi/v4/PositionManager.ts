@@ -28,7 +28,11 @@ export const PositionManagerArtifact = {
       type: "error",
     },
     { inputs: [], name: "ContractLocked", type: "error" },
-    { inputs: [{ internalType: "uint256", name: "deadline", type: "uint256" }], name: "DeadlinePassed", type: "error" },
+    {
+      inputs: [{ internalType: "uint256", name: "deadline", type: "uint256" }],
+      name: "DeadlinePassed",
+      type: "error",
+    },
     {
       inputs: [{ internalType: "Currency", name: "currency", type: "address" }],
       name: "DeltaNotNegative",
@@ -74,7 +78,11 @@ export const PositionManagerArtifact = {
     { inputs: [], name: "NoCodeSubscriber", type: "error" },
     { inputs: [], name: "NoSelfPermit", type: "error" },
     { inputs: [], name: "NonceAlreadyUsed", type: "error" },
-    { inputs: [{ internalType: "address", name: "caller", type: "address" }], name: "NotApproved", type: "error" },
+    {
+      inputs: [{ internalType: "address", name: "caller", type: "address" }],
+      name: "NotApproved",
+      type: "error",
+    },
     { inputs: [], name: "NotPoolManager", type: "error" },
     { inputs: [], name: "NotSubscribed", type: "error" },
     { inputs: [], name: "PoolManagerMustBeLocked", type: "error" },

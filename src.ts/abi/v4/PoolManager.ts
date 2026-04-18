@@ -22,7 +22,11 @@ export const PoolManagerArtifact = {
     { inputs: [], name: "NonzeroNativeValue", type: "error" },
     { inputs: [], name: "PoolNotInitialized", type: "error" },
     { inputs: [], name: "ProtocolFeeCurrencySynced", type: "error" },
-    { inputs: [{ internalType: "uint24", name: "fee", type: "uint24" }], name: "ProtocolFeeTooLarge", type: "error" },
+    {
+      inputs: [{ internalType: "uint24", name: "fee", type: "uint24" }],
+      name: "ProtocolFeeTooLarge",
+      type: "error",
+    },
     { inputs: [], name: "SwapAmountCannotBeZero", type: "error" },
     {
       inputs: [{ internalType: "int24", name: "tickSpacing", type: "int24" }],

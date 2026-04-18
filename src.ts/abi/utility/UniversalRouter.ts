@@ -48,7 +48,11 @@ export const UniversalRouterArtifact = {
     { inputs: [], name: "InsufficientBalance", type: "error" },
     { inputs: [], name: "InsufficientETH", type: "error" },
     { inputs: [], name: "InsufficientToken", type: "error" },
-    { inputs: [{ internalType: "bytes4", name: "action", type: "bytes4" }], name: "InvalidAction", type: "error" },
+    {
+      inputs: [{ internalType: "bytes4", name: "action", type: "bytes4" }],
+      name: "InvalidAction",
+      type: "error",
+    },
     { inputs: [], name: "InvalidBips", type: "error" },
     {
       inputs: [{ internalType: "uint256", name: "commandType", type: "uint256" }],

@@ -1,0 +1,14 @@
+catalogMode: manual
+catalog:
+  "@types/node": ^24.12.2
+  typescript: ^6.0.3
+
+overrides:
+  "@types/node": "catalog:"
+  hardhat: "-"
+  typescript: "catalog:"
+  "react-native": "-"
+  "abitype>zod": "-"
+  "@openzeppelin/contracts": "-"
+
+blockExoticSubdeps: true

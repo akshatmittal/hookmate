@@ -1,10 +1,9 @@
-import { QuoterArtifact } from "./v4/Quoter";
-import { PositionManagerArtifact } from "./v4/PositionManager";
-import { PoolManagerArtifact } from "./v4/PoolManager";
-import { StateViewArtifact } from "./v4/StateView";
-
 import { Permit2Artifact } from "./utility/Permit2";
 import { UniversalRouterArtifact } from "./utility/UniversalRouter";
+import { PoolManagerArtifact } from "./v4/PoolManager";
+import { PositionManagerArtifact } from "./v4/PositionManager";
+import { QuoterArtifact } from "./v4/Quoter";
+import { StateViewArtifact } from "./v4/StateView";
 
 export const v4 = {
   QuoterArtifact,
