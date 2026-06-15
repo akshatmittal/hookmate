@@ -7,13 +7,14 @@
     "type": "git",
     "url": "https://github.com/akshatmittal/hookmate.git"
   },
-  "sideEffects": false,
   "files": [
     "dist",
+    "src",
     "src.ts",
     "README.md"
   ],
   "type": "module",
+  "sideEffects": false,
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
